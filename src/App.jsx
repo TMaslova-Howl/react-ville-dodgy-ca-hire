@@ -4,7 +4,7 @@ import CarBooking from "./components/CarBooking.jsx";
 function App() {
   return (
     <>
-      <h1>Vehicle Hire</h1>
+        <h1>Reactville Car Hire</h1>
         <div>
             <CarBooking/>
         </div>
