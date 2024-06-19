@@ -219,6 +219,11 @@ button:focus-visible {
   color: white;
 }
 
+.totals {
+  color: #eb6dee;
+  text-weight: bold;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

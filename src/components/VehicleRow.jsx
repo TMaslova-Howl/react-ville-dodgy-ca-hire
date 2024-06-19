@@ -8,7 +8,7 @@ const VehicleRow = ({vehicle, onCheck, index})=>{
           <td>£{vehicle.category.price}</td>
           <td className="checkbox-wrapper-5">
               <div className="check">
-                  <input type="checkbox" id={index} onClick={onCheck}/>
+                  <input type="checkbox" id={index} name={index} onClick={onCheck}/>
                   <label htmlFor={index}></label>
               </div>
           </td>
