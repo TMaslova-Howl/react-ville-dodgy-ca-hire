@@ -1,12 +1,12 @@
 import './App.css'
-import CarBooking from "./components/CarBooking.jsx";
+import VehicleBooking from "./components/VehicleBooking.jsx";
 
 function App() {
   return (
     <>
         <h1>Reactville Car Hire</h1>
         <div>
-            <CarBooking/>
+            <VehicleBooking/>
         </div>
     </>
   )

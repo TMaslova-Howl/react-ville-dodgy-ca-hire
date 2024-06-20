@@ -1,19 +1,16 @@
 import {useEffect, useState} from 'react'
-import Vehicles from "../factory/VehicleInventory.js";
 import VehicleSelection from "./VehicleSelection.jsx";
 import {fetchVehicles} from "../services/vehicleService.js";
 
-const CarBooking = () => {
+const VehicleBooking = () => {
     const [starShips, setStarShips] = useState([]);
-    const [vehicles, setVehicles] = useState(Vehicles);
     const [bookings, setBookings] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         const fetchStarships = async () => {
-            const data = await fetchVehicles();
-            console.log('Starship data:', data); // Notice the properties of `data`
-            setStarShips(data); // results is an array
+            const vehicles = await fetchVehicles();
+            setStarShips(vehicles);
         };
         fetchStarships();
     }, []);
@@ -32,8 +29,9 @@ const CarBooking = () => {
             <div className="totals">
                 <h2>Total Price: £{totalPrice}</h2>
             </div>
+            <button type="button">Next</button>
         </>
     );
 }
 
-export default CarBooking;
+export default VehicleBooking;
