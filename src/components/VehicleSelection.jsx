@@ -2,12 +2,11 @@ import VehicleRow from "./VehicleRow.jsx";
 
 const VehicleSelection = ({vehicles, bookings, setBookings, calculateTotal}) => {
     let selectedCars = [];
-    const removeCar = (car) => {
-        selectedCars = bookings.filter(booking => booking != car);
+    const removeCar = (ship) => {
+        selectedCars = bookings.filter(booking => booking != ship);
         setBookings(selectedCars);
     }
     const addCar = (car) => {
-        console.log("add car called");
         selectedCars = [...bookings, car];
         setBookings(selectedCars);
     }
@@ -26,18 +25,18 @@ const VehicleSelection = ({vehicles, bookings, setBookings, calculateTotal}) => 
         <table className="vehicles">
             <thead>
             <tr>
-                <th>Make</th>
+                <th>Name</th>
                 <th>Model</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Select</th>
+                <th>Cost</th>
+                <th>Select your ride</th>
             </tr>
             </thead>
             <tbody>
-            {vehicles.map((car, key) => {
+            {vehicles
+                .map((starShip, key) => {
                 return (
                     <tr key={key}>
-                        <VehicleRow vehicle={car} onCheck={processSelect} index={key}/>
+                        <VehicleRow vehicle={starShip} onCheck={processSelect} index={key}/>
                     </tr>
                 );
             })}
