@@ -8,7 +8,6 @@ const CarBooking = () => {
     const [totalPrice, setTotalPrice] = useState(0);
     console.log(bookings);
     const calculateTotalPrice = (allSelectedVehicles) => {
-        console.log(allSelectedVehicles.length);
         const priceArray = allSelectedVehicles
             .map((vehicle) => vehicle.category.price);
 
@@ -17,10 +16,11 @@ const CarBooking = () => {
     }
     return (
         <>
+            <p>Reliable zombie proof vehicles!</p>
             <VehicleSelection vehicles={vehicles} bookings={bookings} setBookings={setBookings}
                               calculateTotal={calculateTotalPrice}/>
             <div className="totals">
-                Total Price: £{totalPrice.toFixed(2)}
+                <h2>Total Price: £{totalPrice.toFixed(2)}</h2>
             </div>
         </>
     );
