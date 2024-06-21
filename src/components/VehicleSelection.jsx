@@ -24,10 +24,7 @@ const VehicleSelection = ({vehicles, bookings, setBookings, calculateTotal}) => 
     }
 
     const isChecked = (vehicle) => {
-        console.log("bookings from selection", bookings);
-        console.log({vehicle});
         const checkedBooking = bookings?.filter((booking) => booking.name == vehicle.name)
-        console.log({checkedBooking});
         return checkedBooking.length > 0;
 
     }

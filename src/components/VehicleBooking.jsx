@@ -10,9 +10,7 @@ const VehicleBooking = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("useEffectCalled");
         const storedBookings = localStorage.getItem("bookings");
-        console.log({storedBookings});
         const fetchStarships = async () => {
             const vehicles = await fetchVehicles();
             setStarShips(vehicles);
