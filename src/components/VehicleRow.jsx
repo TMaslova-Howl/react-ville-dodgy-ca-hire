@@ -1,10 +1,10 @@
+import {Link} from 'react-router-dom';
+
 const VehicleRow = ({vehicle, onCheck, index, isChecked}) => {
-    if (isChecked) {
-        console.log(isChecked)
-    }
+
     return (
       <>
-          <td>{vehicle.name}</td>
+          <td><Link to={`shipDetails/${vehicle.name}`}>{vehicle.name}</Link></td>
           <td>{vehicle.model}</td>
           <td>£{vehicle.cost_in_credits}</td>
           <td className="checkbox-wrapper-5">
